@@ -12,13 +12,13 @@ const Footer = () => {
               Full Stack Developer & Data Scientist crafting innovative solutions through code and data analysis.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-700 p-2 rounded-full hover:bg-portfolio-primary transition-colors">
+              <a href="https://github.com/prasadchodagiri7989/" target='_blank' className="bg-gray-700 p-2 rounded-full hover:bg-portfolio-primary transition-colors">
                 <Github size={18} />
               </a>
-              <a href="#" className="bg-gray-700 p-2 rounded-full hover:bg-portfolio-primary transition-colors">
+              <a href="https://www.linkedin.com/in/prasadchodagiri/" target='_blank' className="bg-gray-700 p-2 rounded-full hover:bg-portfolio-primary transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="bg-gray-700 p-2 rounded-full hover:bg-portfolio-primary transition-colors">
+              <a href="mailto:chodagiriprasad5@gmail.com" className="bg-gray-700 p-2 rounded-full hover:bg-portfolio-primary transition-colors">
                 <Mail size={18} />
               </a>
             </div>

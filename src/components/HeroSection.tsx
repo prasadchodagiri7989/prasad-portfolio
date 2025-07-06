@@ -24,46 +24,56 @@ const HeroSection = () => {
                 Full Stack Developer & Data Scientist
               </span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-portfolio-dark opacity-0 animate-fade-in animate-delay-100 text-center md:text-left">
               Hi, I'm <span className="text-portfolio-primary">Prasad Chodagiri</span>
             </h1>
-            
+
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl opacity-0 animate-fade-in animate-delay-200 text-center md:text-left">
-              Crafting digital experiences with code and data. Specialized in full-stack development 
+              Crafting digital experiences with code and data. Specialized in full-stack development
               and building intelligent data-driven applications.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in animate-delay-300">
-              <Button 
+              <Button
                 className="bg-portfolio-primary hover:bg-portfolio-primary/90"
                 onClick={scrollToProjects}
               >
                 View Projects
               </Button>
-              <Button variant="outline" className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10">
-                Download Resume
-              </Button>
+              <a href="/resume.pdf" download>
+                <Button
+                  variant="outline"
+                  className="border-portfolio-primary text-portfolio-primary hover:bg-portfolio-primary/10"
+                >
+                  Download Resume
+                </Button>
+              </a>
+
             </div>
-            
+
             <div className="flex items-center gap-4 mt-4 opacity-0 animate-fade-in animate-delay-400">
-              <a href="#" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a href="https://github.com/prasadchodagiri7989/" target='_blank' className="text-gray-600 hover:text-portfolio-primary transition-colors">
                 <Github size={20} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a href="https://www.linkedin.com/in/prasadchodagiri/" target='_blank' className="text-gray-600 hover:text-portfolio-primary transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-portfolio-primary transition-colors">
+              <a
+                href="mailto:chodagiriprasad5@gmail.com"
+                className="text-gray-600 hover:text-portfolio-primary transition-colors"
+              >
                 <Mail size={20} />
               </a>
+
             </div>
           </div>
-          
+
           <div className="hidden md:block opacity-0 animate-fade-in animate-delay-300">
             <Avatar className="h-80 w-80 border-4 border-white shadow-lg">
-              <AvatarImage 
-                src="/lovable-uploads/37bcb24d-04ac-40c0-8f64-19efb8532376.png" 
-                alt="Prasad Chodagiri" 
+              <AvatarImage
+                src="/lovable-uploads/37bcb24d-04ac-40c0-8f64-19efb8532376.png"
+                alt="Prasad Chodagiri"
                 className="object-cover"
               />
               <AvatarFallback>PC</AvatarFallback>
@@ -71,9 +81,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      <a 
-        href="#about" 
+
+      <a
+        href="#about"
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-portfolio-primary animate-bounce-light"
       >
         <ArrowDown size={28} />

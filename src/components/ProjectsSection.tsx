@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Database, Code, ShoppingBag } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,6 +9,7 @@ interface Project {
   description: string;
   technologies: string[];
   icon: React.ReactNode;
+  githubUrl: string;
 }
 
 const ProjectsSection = () => {
@@ -19,32 +19,36 @@ const ProjectsSection = () => {
       title: "Crop Predictor",
       description: "A machine learning application that predicts the most suitable crop based on soil parameters and weather conditions.",
       technologies: ["Python", "Machine Learning", "Flask", "Data Analysis"],
-      icon: <Database className="h-8 w-8 text-portfolio-primary" />
+      icon: <Database className="h-8 w-8 text-portfolio-primary" />,
+      githubUrl: "https://github.com/prasadchodagiri7989/crop-predictor.git"
     },
     {
       id: 2,
-      title: "Student Portal",
-      description: "A comprehensive platform for students to access course materials, submit assignments, and track their academic progress.",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      icon: <Code className="h-8 w-8 text-portfolio-primary" />
+      title: "Job Search Platform",
+      description: "A full-featured job portal that connects job seekers with employers. Users can create profiles, search and filter job listings, and apply directly through the platform.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT Auth"],
+      icon: <Code className="h-8 w-8 text-portfolio-primary" />,
+      githubUrl: "https://github.com/prasadchodagiri7989/job-search-platform.git"
     },
     {
       id: 3,
-      title: "E-Commerce Platform",
-      description: "A fully functional e-commerce website with product catalog, shopping cart, and payment integration.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Payment API"],
-      icon: <ShoppingBag className="h-8 w-8 text-portfolio-primary" />
+      title: "IPL Match Winner Predictor",
+      description: "A data-driven machine learning model that predicts the winning team of IPL matches based on historical data, team stats, and match conditions.",
+      technologies: ["Python", "Machine Learning", "Pandas", "NumPy", "Matplotlib"],
+      icon: <Database className="h-8 w-8 text-portfolio-primary" />,
+      githubUrl: "https://github.com/prasadchodagiri7989/ipl-prediction.git"
     }
+
   ];
 
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Featured Projects</h2>
-        
+        <h2 className="section-title">Projects</h2>
+
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card 
+            <Card
               key={project.id}
               className="project-card opacity-0 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -62,8 +66,8 @@ const ProjectsSection = () => {
                     <h4 className="text-sm font-medium text-gray-500 mb-2">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex} 
+                        <span
+                          key={techIndex}
                           className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded"
                         >
                           {tech}
@@ -71,9 +75,14 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                   </div>
-                  <Button variant="link" className="p-0 h-auto text-portfolio-primary flex items-center gap-1 hover:gap-2 transition-all">
-                    View Details <ArrowRight size={16} />
-                  </Button>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-portfolio-primary text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                  >
+                    View on GitHub <ArrowRight size={16} />
+                  </a>
                 </div>
               </CardContent>
             </Card>

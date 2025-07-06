@@ -47,7 +47,7 @@ const AboutSection = () => {
                     <ul className="space-y-2 text-sm text-gray-600">
                       <li><span className="font-medium">Name:</span> Prasad Chodagiri</li>
                       <li><span className="font-medium">Email:</span> chodagiriprasad5@gmail.com</li>
-                      <li><span className="font-medium">Location:</span> India</li>
+                      <li><span className="font-medium">Location:</span> Visakhapatnam, India</li>
                       <li><span className="font-medium">Available:</span> For freelance & full-time</li>
                     </ul>
                   </div>
